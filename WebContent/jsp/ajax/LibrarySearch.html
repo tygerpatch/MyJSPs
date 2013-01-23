@@ -1,0 +1,127 @@
+<html>
+	<head>
+		<script type="text/javascript">
+
+		function ShowHints()
+		{
+                    //alert("Show Hints");
+
+                    // *** Create XMLHttpRequest object
+                    //alert("Create XMLHttpRequest");
+                    
+                    var xmlHttp = null;
+
+                    // Firefox, Mozilla, and Opera
+                    if (window.XMLHttpRequest)
+                    {
+                            xmlHttp = new XMLHttpRequest( );
+                    }
+                    // Internet Explorer 5.5 and later
+                    else if (window.ActiveXObject)
+                    {
+                            xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+                    }
+
+                    // *** State Change Function
+                   // alert("Ready State Change");
+
+                    xmlHttp.onreadystatechange = function()
+                    {
+                       // alert("State Changed");
+                        if ( (xmlHttp.readyState == 4) || (xmlHttp.readyState == "complete") )
+			{
+                            // var myDiv = document.myForm.myDiv;
+                            var myDiv = document.getElementById("myDiv");
+
+                            // alert( xmlHttp.responseText );
+                            // remove children nodes from myDiv
+                            //for(i = 0; i < myDiv.childNodes.length; i++)
+                            //{
+                            //    myDiv.removeChild( myDiv.childNodes[i] );
+                            //}
+
+                            // add new children nodes to myDiv
+                            myDiv.innerHTML =  xmlHttp.responseText;
+                            myDiv.style.visibility = "visible";
+                           // alert("Updating Page");
+                        }
+                    }
+
+                    // *** Sending request
+                    //alert("Open/Send");
+                    
+                    var url = "Suggest.jsp?search=" + document.myForm.myInput.value;
+
+                    xmlHttp.open("GET", url, true);
+                    xmlHttp.send(null);
+                    
+                    //alert(xmlHttp.readyState);
+                }
+		</script>
+        </head>
+	<body>
+		<form name="myForm">
+                    <table border="0">
+                        <tr>
+                            <td>Search</td>
+                            <td><input onkeyup="ShowHints()" name="myInput"></td>
+                        </tr>
+                        <tr>
+                            <td>Suggestion</td>
+                            <td>
+                                <div id="myDiv" style="border-style: solid; border-width: thin; visibility: hidden;">
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+		</form>
+	</body>
+</html>
+
+<!--
+
+<select size="0" name="myList"></select>
+
+<input disabled name="Result">
+
+                                <SELECT disabled multiple size="4" name="suggestions">
+                                </SELECT>
+
+
+<SELECT multiple size="4" name="component-select">
+<OPTION selected value="Component_1_a">Component_1</OPTION>
+<OPTION selected value="Component_1_b">Component_2</OPTION>
+<OPTION>Component_3</OPTION>
+<OPTION>Component_4</OPTION>
+<OPTION>Component_5</OPTION>
+<OPTION>Component_6</OPTION>
+<OPTION>Component_7</OPTION>
+</SELECT>
+-->
+
+<!--
+                            // document.getElementById("txtHint").innerHTML=xmlHttp.responseText;
+                            // document.myForm.Result.value = xmlHttp.responseText;
+                            // document.myForm.txtHint.innerHTML = xmlHttp.responseText;
+
+                            // document.getElementById("txtHint").innerHTML=xmlHttp.responseText;
+
+			//var option = document.createElement('option');
+			//option.text = x++; // str;
+
+			//try
+			//{
+//				list.add( option, null ); // standards compliant
+			//}
+			//catch(ex)
+			//{
+//				x.add( option ); // IE only
+//			}
+
+
+
+
+                            // document.myForm.myRow.style = "visibility: visible";
+                            // .value = xmlHttp.responseText;
+                            // .innerHTML = xmlHttp.responseText;
+-->
