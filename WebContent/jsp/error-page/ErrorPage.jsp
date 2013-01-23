@@ -88,7 +88,6 @@
         }
       %>
     </table>
-
     Attribute List
     <!-- "javax.servlet.jsp.jspException" for getting an Exception -->
     <table border=3>
