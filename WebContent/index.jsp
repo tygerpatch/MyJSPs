@@ -4,49 +4,43 @@
     Author     : Todd Gerspacher
 --%>
 
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-   "http://www.w3.org/TR/html4/loose.dtd">
-
 <html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
-    </head>
-    <body>
-        <h1>These are examples taken from a variety of sources</h1>
-        <h3>Basic JSP</h3>
-        <ul>
-            <li><a href="./jsp/basic/DisplayDate.jsp">DisplayDate</a></li>
-            <li><a href="./jsp/basic/Counter.jsp">Counter</a></li>
-            <li><a href="./jsp/basic/JSP_Declaration.jsp">JSP_Declaration</a></li>
-            <li><a href="./jsp/basic/Parrot.jsp">Parrot</a></li>
-            <li><a href="./jsp/basic/iteration.jsp">iteration</a></li>
-        </ul>
-        <h3>Beans</h3>
-        <ul>
-            <li><a href="./jsp/beans/greeter/GreeterBean.jsp">GreeterBean</a></li>
-            <li><a href="./jsp/beans/name/GetName.html">GetName</a></li>
-           <li><a href="./jsp/beans/time/CurrentTime.jsp">CurrentTime</a></li>
-        </ul>
-        <h3>Cookie</h3>
-        <ul>
-            <li><a href="./jsp/cookie/Form.html">Form</a></li>
-        </ul>
-        <h3>MySql</h3>
-        <ul>
-            <li><a href="./jsp/mysql/BookDetails/BookEntryForm.jsp">BookEntryForm</a></li>
-            <li><a href="./jsp/mysql/PhoneBook/NewEntry.jsp">PhoneBook</a></li>
-        </ul>
-        <h3>Error Page</h3>
-        <ul>
-            <li><a href="./jsp/error-test/ErrorPage.jsp">ErrorPage</a></li>
-        </ul>
-        <h3>AJAX</h3>
-        <ul>
-            <li><a href="./jsp/ajax/LibrarySearch.html">Library Search</a></li>
-        </ul>
-
-        <%@ include file="./jsp/jspf/footer.jspf" %>
-    </body>
+  <head>
+    <title>JSP Page</title>
+  </head>
+  <body>
+    <h1>These are examples taken from a variety of sources</h1>
+    <h3>Basic JSP</h3>
+    <ul>
+      <li><a href="./jsp/basic/DisplayDate.jsp">DisplayDate</a></li>
+      <li><a href="./jsp/basic/Counter.jsp">Counter</a></li>
+      <li><a href="./jsp/basic/JSP_Declaration.jsp">JSP_Declaration</a></li>
+      <li><a href="./jsp/basic/Parrot.jsp">Parrot</a></li>
+      <li><a href="./jsp/basic/iteration.jsp">iteration</a></li>
+    </ul>
+    <h3>Beans</h3>
+    <ul>
+      <li><a href="./jsp/beans/greeter/GreeterBean.jsp">GreeterBean</a></li>
+      <li><a href="./jsp/beans/name/GetName.html">GetName</a></li>
+      <li><a href="./jsp/beans/time/CurrentTime.jsp">CurrentTime</a></li>
+    </ul>
+    <h3>Cookie</h3>
+    <ul>
+      <li><a href="./jsp/cookie/Form.html">Form</a></li>
+    </ul>
+    <h3>MySql</h3>
+    <ul>
+      <li><a href="./jsp/mysql/BookDetails/BookEntryForm.jsp">BookEntryForm</a></li>
+      <li><a href="./jsp/mysql/PhoneBook/NewEntry.jsp">PhoneBook</a></li>
+    </ul>
+    <h3>Error Page</h3>
+    <ul>
+      <li><a href="./jsp/error-test/ErrorPage.jsp">ErrorPage</a></li>
+    </ul>
+    <h3>AJAX</h3>
+    <ul>
+      <li><a href="./jsp/ajax/LibrarySearch.html">Library Search</a></li>
+    </ul>
+    <%@ include file="./jsp/jspf/footer.jspf"%>
+  </body>
 </html>
