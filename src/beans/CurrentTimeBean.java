@@ -4,19 +4,12 @@ import java.util.Calendar;
 
 public class CurrentTimeBean {
 
-  public int hours;
-  public int minutes;
+  public int hours, minutes;
 
   public CurrentTimeBean() {
-    Calendar cal = Calendar.getInstance();
-    // Date now = new Date();
-
-    // the following methods were deprecated, use Calendar instead
-    // this.hours = now.getHours();
-    // this.minutes = now.getMinutes();
-
-    hours = cal.get(Calendar.HOUR_OF_DAY);
-    minutes = cal.get(Calendar.MINUTE);
+    Calendar calendar = Calendar.getInstance();
+    hours = calendar.get(Calendar.HOUR_OF_DAY);
+    minutes = calendar.get(Calendar.MINUTE);
   }
 
   public int getHours() {
