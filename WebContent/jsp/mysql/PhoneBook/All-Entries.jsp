@@ -1,4 +1,4 @@
-<%@page import="java.sql.DriverManager, java.sql.Connection, java.sql.Statement, java.sql.ResultSet"%>
+<%@page import="com.mysql.jdbc.Driver, java.sql.DriverManager, java.sql.Connection, java.sql.Statement, java.sql.ResultSet"%>
 
 <html>
   <body>
@@ -15,7 +15,7 @@
         Class.forName(JDBC_DRIVER);
         Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:8080/my_jdbc", "root", "password");
         Statement statement = connection.createStatement();
-        ResultSet resultSet = statement.executeQuery("select * from phonebook");
+        ResultSet resultSet = statement.executeQuery("SELECT * FROM phonebook");
 
         while (resultSet.next()) {
       %>
