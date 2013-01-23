@@ -24,13 +24,12 @@
   </head>
 
   <body>
-  <% if (myCookie == null) { %>
-    No Cookie found with the name
-    <%=cookieName%>
-  <% } else { %>
-  <p>
-    Welcome: <%=myCookie.getValue()%>.
-  </p>
-  <% } %>
-</body>
+    <% if (myCookie == null) { %>
+      No Cookie found with the name <%=cookieName%>.
+    <% } else { %>
+    <p>
+      Welcome: <%=myCookie.getValue()%>.
+    </p>
+    <% } %>
+  </body>
 </html>
