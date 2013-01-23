@@ -10,9 +10,6 @@
   if (username == null)
     username = "NULL";
 
-  // Date now = new Date();
-  // String timestamp = now.toString();
-
   Cookie cookie = new Cookie("username", username);
   cookie.setMaxAge(-1);
 
@@ -26,7 +23,7 @@
 
   <body>
     <p>
-      <a href="ShowCookie.jsp"> Next Page to view the cookie value </a>
+      Click <a href="ShowCookie.jsp">Next Page</a> to view the Cookie's value
     <p>
   </body>
 </html>
