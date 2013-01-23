@@ -1,28 +1,25 @@
-<%@page contentType="text/html" %>
+<!--
+  "Introduction to JSP Declaratives", roseindia,
+  http://www.roseindia.net/jsp/jspdeclaratives.shtml
+-->
+<%@page contentType="text/html"%>
 <html>
-	<body>
+  <body>
+    <%!
+    int count = 0;
 
-	<%!
-		int cnt=0;
+    private int getCount() {
+      count++;
+      return count;
+    }
+    %>
 
-		private int getCount()
-		{
-			//increment cnt and return the value
-			cnt++;
-
-			return cnt;
-		}
-	%>
-
-		<p>Values of Cnt are:</p>
-
-		<p><%=getCount()%></p>
-		<p><%=getCount()%></p>
-		<p><%=getCount()%></p>
-		<p><%=getCount()%></p>
-		<p><%=getCount()%></p>
-		<p><%=getCount()%></p>
-
-	</body>
-
+    <p>Values of Count are:</p>
+    <p><%= getCount() %></p>
+    <p><%= getCount() %></p>
+    <p><%= getCount() %></p>
+    <p><%= getCount() %></p>
+    <p><%= getCount() %></p>
+    <p><%= getCount() %></p>
+  </body>
 </html>
