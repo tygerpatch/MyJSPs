@@ -40,9 +40,9 @@
         <td width = "80%">
           <%
             if (exception != null) {
-              out.print("<PRE>");
+              out.print("<pre]>");
               exception.printStackTrace(new PrintWriter(out));
-              out.print("</PRE>");
+              out.print("</pre>");
             }
           %>
         </td>
@@ -54,62 +54,14 @@
             if ((exception != null) && (exception instanceof ServletException)) {
               Throwable cause = ((ServletException) exception).getRootCause();
               if (cause != null) {
-                out.print("<PRE>");
+                out.print("<pre>");
                 cause.printStackTrace(new PrintWriter(out));
-                out.print("</PRE>");
+                out.print("</pre>");
               }
             }
           %>
         </td>
       </tr>
     </table>
-
-    <hr>
-    Header List
-    <table border=3>
-      <tr>
-        <td>Name</td>
-        <td>Value</td>
-      </tr>
-      <%
-        String name = "";
-        String value = "";
-
-        java.util.Enumeration headers = request.getHeaderNames();
-        while (headers.hasMoreElements()) {
-          name = (String) headers.nextElement();
-          value = request.getHeader(name);
-      %>
-      <tr>
-        <td><%=name%></td>
-        <td><%=value%></td>
-      </tr>
-      <%
-        }
-      %>
-    </table>
-    Attribute List
-    <!-- "javax.servlet.jsp.jspException" for getting an Exception -->
-    <table border=3>
-      <%
-        java.util.Enumeration attributes = request.getAttributeNames();
-        while (attributes.hasMoreElements()) {
-          name = (String) attributes.nextElement();
-
-          if (request.getAttribute(name) == null) {
-            value = "null";
-          } else {
-            value = request.getAttribute(name).toString();
-          }
-      %>
-      <tr>
-        <td><%=name%></td>
-        <td><%=value%></td>
-      </tr>
-      <%
-        }
-      %>
-    </table>
-
   </body>
 </html>
