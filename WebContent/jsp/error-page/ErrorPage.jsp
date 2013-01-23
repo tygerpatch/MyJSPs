@@ -63,5 +63,6 @@
         </td>
       </tr>
     </table>
+    <%@include file = "/WEB-INF/jspf/attribute-list.jspf" %>
   </body>
 </html>

@@ -41,6 +41,6 @@
     <ul>
       <li><a href="./jsp/ajax/LibrarySearch.html">Library Search</a></li>
     </ul>
-    <%@ include file="./jsp/jspf/footer.jspf"%>
+    <%@ include file="/WEB-INF/jspf/footer.jspf"%>
   </body>
 </html>
