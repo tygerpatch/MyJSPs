@@ -6,26 +6,17 @@
      It also used square brackets - '[' and ']' - to initialize array instead of curly braces - '{' and '}'.
  -->
 <html>
-	<body>
-		<%!
-			String itemName[] = {"Paper", "Pencil", "Eraser"};
-			double itemCost[] = {123.00, 234.50, 345.50};
-			double totalCost = 0.0;
-		%>
-		<ul>
-			<%
-				for(int j = 0; j < itemName.length; j++)
-				{
-			%>
-			<li>
-				 Item = <%= itemName[j] %>,
-				 $<%=  itemCost[j] %>
-			</li>
-			<%
-					totalCost = totalCost + itemCost[j];
-				}
-			%>
-		</ul>	
-		Total = <%= totalCost %>
-	</body>
+  <body>
+    <%!
+      String itemName[] = { "Paper", "Pencil", "Eraser" };
+      double itemCost[] = { 123.00, 234.50, 345.50 };
+      double totalCost = 0.0;
+    %>
+    <ul>
+      <% for (int j = 0; j < itemName.length; j++) { %>
+        <li>Item = <%= itemName[j] %>, $<%= itemCost[j] %></li>
+        <% totalCost = totalCost + itemCost[j]; } %>
+    </ul>
+    Total = <%= totalCost %>
+  </body>
 </html>
