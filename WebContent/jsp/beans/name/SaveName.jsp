@@ -1,8 +1,12 @@
 <jsp:useBean id="user" class="beans.UserData" scope="session" />
 
-<jsp:setProperty name="user" property="*" /> 
+<!--
+  "Beans and Form processing", JSP Tutorial,
+  http://www.jsptut.com/forms.jsp
+ -->
+<jsp:setProperty name="user" property="*" />
 <html>
-	<body>
-		<a href="NextPage.jsp">Continue</a>
-	</body>
+  <body>
+    <a href="NextPage.jsp">Continue</a>
+  </body>
 </html>
