@@ -35,7 +35,7 @@
     </ul>
     <h3>Error Page</h3>
     <ul>
-      <li><a href="./jsp/error-page/ErrorPage.jsp">ErrorPage</a></li>
+      <li><a href="./jsp/error-page/TestErrorPage.jsp">Test ErrorPage</a></li>
     </ul>
     <h3>AJAX</h3>
     <ul>
