@@ -2,6 +2,8 @@ package beans;
 
 import java.util.Calendar;
 
+// "How to use JavaBeans and JSP:useBean action in JSP"
+// http://www.java-tips.org/java-ee-tips/javaserver-pages/how-to-use-javabeans-and-jsp-usebean-action-i-2.html
 public class CurrentTimeBean {
 
   public int hours, minutes;
