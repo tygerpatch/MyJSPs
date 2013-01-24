@@ -1,6 +1,11 @@
 <%@page errorPage="../error-page/ErrorPage.jsp" %>
 <%@page import="com.mysql.jdbc.Driver, java.sql.DriverManager, java.sql.Connection, java.sql.Statement, java.sql.ResultSet"%>
 
+<%-- TODO: create menu to Add New Book, View All Books, and Search for a Book --%>
+<%-- TODO: How to Search for book on server, not through JSP page --%>
+<%-- TODO: How to pass results of Search to page through AJAX --%>
+<%-- TODO: How to search for BOTH author and title --%>
+
 <%
   Class.forName("com.mysql.jdbc.Driver").newInstance();
   Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/my_jdbc", "root", "password");
@@ -13,12 +18,7 @@
 
   if (request.getParameter("search") != null) {
     String str = request.getParameter("search");
-    // System.out.println("search = " + str);
     resultSet = statement.executeQuery("select author from authors where author like '" + str + "%';");
-
-    //System.out.println( "select author from authors where author like '" + str + "%';" );
-
-    System.out.println("******************************");
     try {
       while (resultSet.next()) {
         //resultSet.

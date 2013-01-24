@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- a tag library descriptor -->
+<taglib version="2.0" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee web-jsptaglibrary_2_0.xsd">
+  <!-- The tag library's version. -->
+    <tlib-version>1.0</tlib-version>
+  <!-- Name that could be used by a JSP page-authoring tool 
+    to create names with a mnemonic value. -->
+    <short-name>ts</short-name>
+
+    <!-- <uri>/TagSupportTLD</uri> -->  
+    <uri>/WEB-INF/tld/TagSupportTLD</uri>
+  
+  <!-- Declares the tags defined in the tag library. -->
+    <tag>
+    <!-- The unique tag name. -->
+        <name>HelloWorld</name>
+    <!--  The fully qualified name of the tag handler class. -->
+        <tag-class>TagSupport.HelloWorld</tag-class>
+    <!-- 
+            The body content type. 
+            empty: The body must be empty.
+        -->
+        <body-content>empty</body-content>
+    </tag>
+    <tag>
+        <name>BlueBackground</name>
+        <tag-class>TagSupport.BlueBackground</tag-class>
+        <body-content>JSP</body-content>
+    </tag>
+    
+    <tag>
+        <name>SecretMessage</name>
+        <tagclass>TagSupport.SecretMessage</tagclass>
+        <bodycontent>empty</bodycontent>
+    </tag>
+    
+    <tag>
+        <name>ReverseString</name>
+        <tagclass>TagSupport.ReverseString</tagclass>
+        <bodycontent>empty</bodycontent>
+        <attribute>
+            <name>str</name>
+            <required>true</required>
+        </attribute>
+    </tag>
+
+    <tag>
+        <name>inner</name>
+        <tagclass>TagSupport.InnerTag</tagclass>
+        <bodycontent>empty</bodycontent>
+        <attribute>
+            <name>msg</name>
+            <required>true</required>
+        </attribute>
+    </tag>  
+
+</taglib>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib version="2.0" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee web-jsptaglibrary_2_0.xsd">
+
+    <!-- The tag library's version. -->
+    <tlib-version>1.0</tlib-version>
+    <!-- Name that could be used by a JSP page-authoring tool 
+    to create names with a mnemonic value. -->
+    <short-name>bts</short-name>
+    <uri>/WEB-INF/tld/BodyTagSupportTLD</uri>
+    
+    <tag>
+        <name>filter</name>
+        <tagclass>BodyTagSupport.FilterTag</tagclass>
+        <bodycontent>JSP</bodycontent>
+    </tag>
+    
+    <tag>
+        <name>repeat</name>
+        <tagclass>BodyTagSupport.RepeatTag</tagclass>
+        <bodycontent>JSP</bodycontent>
+        <attribute>
+            <name>reps</name>
+            <required>true</required>
+<!-- rtexprvalue indicates whether attribute can be a JSP expression. -->
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>
+    
+    <tag>
+        <name>convert</name>
+        <tagclass>BodyTagSupport.Converter</tagclass>
+        <bodycontent>JSP</bodycontent>
+        <attribute>
+            <name>to</name>
+            <required>false</required>
+        </attribute>
+    </tag>
+
+
+ <!-- IF tag -->
+    <tag>
+        <name>if</name>
+        <tagclass>BodyTagSupport.IfTag</tagclass>
+        <bodycontent>JSP</bodycontent>
+        <attribute>
+            <name>predicate</name>
+            <required>true</required>
+            <rtexprvalue>true</rtexprvalue>
+        </attribute>
+    </tag>  
+
+    <tag>
+        <name>outter</name>
+        <tagclass>BodyTagSupport.OutterTag</tagclass>
+        <bodycontent>JSP</bodycontent>
+        <attribute>
+            <name>msg</name>
+            <required>true</required>
+            <rtexprvalue>false</rtexprvalue>
+        </attribute>
+    </tag>  
+
+    <tag>
+        <name>write</name>
+        <tagclass>BodyTagSupport.MessageWriteTagHandler</tagclass>
+        <bodycontent>JSP</bodycontent>
+        <attribute>
+            <name>fontColor</name>
+            <required>false</required>
+        </attribute>
+    </tag>
+
+</taglib>
