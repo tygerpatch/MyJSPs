@@ -1,5 +1,5 @@
 <%@ page isErrorPage="true"%>
-<%@ page import="java.io.PrintWriter"%>
+<%@ page import="java.io.PrintWriter, java.util.Enumeration"%>
 <html>
   <head>
     <title>Error Page</title>
@@ -63,6 +63,6 @@
         </td>
       </tr>
     </table>
-    <%@include file = "/WEB-INF/jspf/attribute-list.jspf" %>
+    <jsp:directive.include file = "/WEB-INF/jspf/attribute-list.jspf" />
   </body>
 </html>
