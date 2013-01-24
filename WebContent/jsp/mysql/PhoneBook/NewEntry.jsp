@@ -1,3 +1,4 @@
+<%@ page errorPage="../../error-page/ErrorPage.jsp" %>
 <%@page import="com.mysql.jdbc.Driver, java.sql.DriverManager, java.sql.Connection, java.sql.Statement, java.sql.ResultSet"%>
 
 <html>
@@ -9,8 +10,8 @@
 
       if ((null != firstName) && (null != lastName) && (null != phoneNumber)) {
         String JDBC_DRIVER = "com.mysql.jdbc.Driver";
-        Class.forName(JDBC_DRIVER);
-        Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:8080/my_jdbc", "root", "password");
+        Class.forName(JDBC_DRIVER).newInstance();
+        Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/my_jdbc", "root", "password");
 
         StringBuffer sqlStatement = new StringBuffer("INSERT INTO phonebook VALUES(\"");
 
