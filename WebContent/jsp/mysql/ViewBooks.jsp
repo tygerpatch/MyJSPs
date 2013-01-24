@@ -1,12 +1,31 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
-</head>
-<body>
+<%@ page errorPage="../../error-page/ErrorPage.jsp" %>
+<%@page import="com.mysql.jdbc.Driver, java.sql.DriverManager, java.sql.Connection, java.sql.Statement, java.sql.ResultSet"%>
 
-</body>
+<html>
+  <body>
+
+    <table border='1'>
+      <tr>
+        <th>First</th>
+        <th>Last</th>
+        <th>Phone #</th>
+      </tr>
+
+      <%
+        String JDBC_DRIVER = "com.mysql.jdbc.Driver";
+        Class.forName(JDBC_DRIVER);
+        Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/my_jdbc", "root", "password");
+        Statement statement = connection.createStatement();
+        ResultSet resultSet = statement.executeQuery("SELECT * FROM phonebook");
+
+        while (resultSet.next()) {
+      %>
+      <tr>
+        <td><%= resultSet.getString("FirstName") %></td>
+        <td><%= resultSet.getString("LastName") %></td>
+        <td><%= resultSet.getString("PhoneNumber") %></td>
+      </tr>
+      <% } %>
+    </table>
+  </body>
 </html>
