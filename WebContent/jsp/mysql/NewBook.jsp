@@ -1,45 +1,33 @@
-<%@ page errorPage="../../error-page/ErrorPage.jsp" %>
+<%@ page errorPage="../error-page/ErrorPage.jsp" %>
 <%@page import="com.mysql.jdbc.Driver, java.sql.DriverManager, java.sql.Connection, java.sql.Statement, java.sql.ResultSet"%>
 
 <html>
   <body>
     <%
-      String firstName = request.getParameter("firstName");
-      String lastName = request.getParameter("lastName");
-      String phoneNumber = request.getParameter("phoneNumber");
+      String name = request.getParameter("name");
+      String author = request.getParameter("author");
 
-      if ((null != firstName) && (null != lastName) && (null != phoneNumber)) {
-        String JDBC_DRIVER = "com.mysql.jdbc.Driver";
-        Class.forName(JDBC_DRIVER).newInstance();
+      if ((null != name) && (null != author)) {
+        Class.forName("com.mysql.jdbc.Driver").newInstance();
         Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/my_jdbc", "root", "password");
-
-        StringBuffer sqlStatement = new StringBuffer("INSERT INTO phonebook VALUES(\"");
-
-        sqlStatement.append(firstName);
-        sqlStatement.append("\",\"");
-        sqlStatement.append(lastName);
-        sqlStatement.append("\",\"");
-        sqlStatement.append(phoneNumber);
-        sqlStatement.append("\")");
-
         Statement statement = connection.createStatement();
-        statement.executeUpdate(sqlStatement.toString());
+        statement.executeUpdate("INSERT INTO books(name, author) values('"+ name + "','" + author + "')");
     %>
-      <h3>New Entry Added</h3>
+      <h3>Book Successfully Added</h3>
     <% } %>
-    <form method="get" action="NewEntry.jsp">
+    <%-- TODO: How to add entry on server, not through JSP page --%>
+    <%-- TODO: validate form, never accept anything from client without validating first --%>
+    <form action="NewBook.jsp" method="post">
       <table>
         <tr>
-          <td>First</td>
-          <td><input type="text" name="firstName" value="" /></td>
+          <td>Book Name:</td>
+          <td><input name="name" type="text" size="50">
+          </td>
         </tr>
         <tr>
-          <td>Last</td>
-          <td><input type="text" name="lastName" value="" /></td>
-        </tr>
-        <tr>
-          <td>Phone #</td>
-          <td><input type="text" name="phoneNumber" value="" /></td>
+          <td>Author:</td>
+          <td><input name="author" type="text" size="50">
+          </td>
         </tr>
         <tr>
           <td><input type="submit" value="Okay" /></td>
