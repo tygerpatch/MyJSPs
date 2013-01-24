@@ -54,6 +54,25 @@
         </td>
       </tr>
     </table>
-    <jsp:directive.include file = "/WEB-INF/jspf/attribute-list.jspf" />
+    <h3>Attribute List</h3>
+    <table border=3>
+      <%
+        Enumeration<String> attributes = request.getAttributeNames();
+        String name, value;
+        while (attributes.hasMoreElements()) {
+          name = (String) attributes.nextElement();
+    
+          if (request.getAttribute(name) == null) {
+            value = "null";
+          } else {
+            value = request.getAttribute(name).toString();
+          }
+      %>
+      <tr>
+        <td><%= name %></td>
+        <td><%= value %></td>
+      </tr>
+      <% } %>
+    </table>
   </body>
 </html>
