@@ -1,3 +1,4 @@
+<%@ page errorPage="../../error-page/ErrorPage.jsp" %>
 <%@page import="com.mysql.jdbc.Driver, java.sql.DriverManager, java.sql.Connection, java.sql.Statement, java.sql.ResultSet"%>
 
 <html>
@@ -13,7 +14,7 @@
       <%
         String JDBC_DRIVER = "com.mysql.jdbc.Driver";
         Class.forName(JDBC_DRIVER);
-        Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:8080/my_jdbc", "root", "password");
+        Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/my_jdbc", "root", "password");
         Statement statement = connection.createStatement();
         ResultSet resultSet = statement.executeQuery("SELECT * FROM phonebook");
 
