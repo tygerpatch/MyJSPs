@@ -12,35 +12,26 @@
     https://github.com/bigbluebutton/bigbluebutton/blob/master/bbb-api-demo/src/main/webapp/error.jsp
   --%>
   <body bgcolor="#FFFFFF">
-    <%
-      Object statusCode = request.getAttribute("javax.servlet.error.status_code");
-      Object exceptionType = request.getAttribute("javax.servlet.error.exception_type");
-      Object message = request.getAttribute("javax.servlet.error.message");
-    %>
-    <p>
-      <a href="<%=response.encodeURL(request.getContextPath())%>">Home</a>
-    </p>
-    <hr>
-    <h2>An Error has occured:</h2>
+    <h2>An Error has occurred:</h2>
     <table cellpadding="2" CELLSPACING="2" BORDER="1" WIDTH="100%">
       <tr>
         <td width = "20%"><b>Status Code</b></td>
-        <td width = "80%"><%= statusCode %></td>
+        <td width = "80%"><%= request.getAttribute("javax.servlet.error.status_code") %></td>
       </tr>
       <tr>
         <td width = "20%"><b>Exception Type</b></td>
-        <td width = "80%"><%= exceptionType %></td>
+        <td width = "80%"><%= request.getAttribute("javax.servlet.error.exception_type") %></td>
       </tr>
       <tr>
         <td width = "20%"><b>Message</b></td>
-        <td width = "80%"><%= message %></td>
+        <td width = "80%"><%= request.getAttribute("javax.servlet.error.message") %></td>
       </tr>
       <tr>
         <td width = "20%"><b>Exception</b></td>
         <td width = "80%">
           <%
             if (exception != null) {
-              out.print("<pre]>");
+              out.print("<pre>");
               exception.printStackTrace(new PrintWriter(out));
               out.print("</pre>");
             }
