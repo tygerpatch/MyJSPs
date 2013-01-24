@@ -30,9 +30,9 @@
     </ul>
     <h3>MySql</h3>
     <ul>
-      <li><a href="./jsp/mysql/BookDetails/BookEntryForm.jsp">BookEntryForm</a></li>
-      <li><a href="./jsp/mysql/PhoneBook/NewEntry.jsp">New PhoneBook Entry</a></li>
-      <li><a href="./jsp/mysql/PhoneBook/All-Entries.jsp">All PhoneBook Entries</a></li>
+      <li><a href="./jsp/mysql/NewBook.jsp">New Book</a></li>
+      <li><a href="./jsp/mysql/SearchBooks.jsp">Search Books</a></li>
+      <li><a href="./jsp/mysql/ViewBooks.jsp">View All Books</a></li>
     </ul>
     <h3>Error Page</h3>
     <ul>
