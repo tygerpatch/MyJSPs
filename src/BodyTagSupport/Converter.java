@@ -1,56 +1,46 @@
 package BodyTagSupport;
 
+import javax.servlet.jsp.JspException;
 import javax.servlet.jsp.tagext.BodyContent;
 import javax.servlet.jsp.tagext.BodyTagSupport;
 
-public class Converter extends BodyTagSupport
-{
-    private String _to = null;
+public class Converter extends BodyTagSupport {
+  private String _to = null;
 
-    public String getTo()
-    { 
-        return _to; 
-    }
-    
-    public void setTo(String t)
-    {
-        _to = t; 
-    }
-    
-    public int doAfterBody()
-    {
-        try
-        {
-            BodyContent bc = getBodyContent();
+  public String getTo() {
+    return _to;
+  }
 
-            double temperature = Double.parseDouble(bc.getString());
+  public void setTo(String t) {
+    _to = t;
+  }
 
-            if(_to == null || _to.length() == 0 ||
-                    _to.toUpperCase().startsWith("F"))
-            {
-                bc.getEnclosingWriter().print( toFahrenheit(temperature) );
+  @Override
+  public int doAfterBody() throws JspException {
+    try {
+      BodyContent bc = getBodyContent();
 
-            }
-            else
-            {       
-                bc.getEnclosingWriter().print( toKelvin(temperature) );
-            }
-        }
-        catch(Exception ignore)
-        {
-            ignore.printStackTrace();
-        }
+      double temperature = Double.parseDouble(bc.getString());
 
-        return EVAL_PAGE; 
+      if (_to == null || _to.length() == 0 || _to.toUpperCase().startsWith("F")) {
+        bc.getEnclosingWriter().print(toFahrenheit(temperature));
+      }
+      else {
+        bc.getEnclosingWriter().print(toKelvin(temperature));
+      }
+    } 
+    catch (Exception ignore) {
+      ignore.printStackTrace();
     }
 
-    private double toFahrenheit(double c)
-    {
-        return 32.0 + (c*1.8);
-    }
+    return EVAL_PAGE;
+  }
 
-    private double toKelvin(double c)
-    {
-        return 273.0 + c;
-    }
+  private double toFahrenheit(double c) {
+    return 32.0 + (c * 1.8);
+  }
+
+  private double toKelvin(double c) {
+    return 273.0 + c;
+  }
 }
