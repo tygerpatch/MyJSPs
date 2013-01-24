@@ -1,3 +1,4 @@
+<%-- fragment file that's included in ErrorPage --%>
 <h3>Attribute List</h3>
 <!-- "javax.servlet.jsp.jspException" for getting an Exception -->
 <table border=3>
