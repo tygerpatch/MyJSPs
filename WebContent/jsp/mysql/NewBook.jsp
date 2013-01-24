@@ -12,9 +12,13 @@
         Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/my_jdbc", "root", "password");
         Statement statement = connection.createStatement();
         statement.executeUpdate("INSERT INTO books(name, author) values('"+ name + "','" + author + "')");
+
+        statement.close();
+        connection.close();
     %>
       <h3>Book Successfully Added</h3>
     <% } %>
+    <%-- TODO: create menu to Add New Book, View All Books, and Search for a Book --%>
     <%-- TODO: How to add entry on server, not through JSP page --%>
     <%-- TODO: validate form, never accept anything from client without validating first --%>
     <form action="NewBook.jsp" method="post">
