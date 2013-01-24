@@ -38,10 +38,6 @@
     <ul>
       <li><a href="./jsp/error-page/TestErrorPage.jsp">Test ErrorPage</a></li>
     </ul>
-    <h3>AJAX</h3>
-    <ul>
-      <li><a href="./jsp/ajax/LibrarySearch.html">Library Search</a></li>
-    </ul>
     <%@ include file="/WEB-INF/jspf/footer.jspf"%>
   </body>
 </html>
