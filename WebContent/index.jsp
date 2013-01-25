@@ -39,11 +39,10 @@
       <li><a href="./jsp/error-page/TestErrorPage.jsp">Test ErrorPage</a></li>
     </ul>
     <!-- These examples were taken from a variety of sources -->
-    <a href="./jsp/TagSupportExamples.jsp">TagSupport</a>
-    <br />
-    <a href="./jsp/BodyTagSupportExamples/index.jsp">
-        BodyTagSupport
-    </a>
+    <p>
+      <a href="./jsp/TagSupportExamples.jsp">TagSupport</a><br />
+      <a href="./jsp/BodyTagSupportExamples/index.jsp">BodyTagSupport</a>
+    </p>
     <%@ include file="/WEB-INF/jspf/footer.jspf"%>
   </body>
 </html>
