@@ -10,7 +10,7 @@
     </head>
     <body>
         <p>
-            Example 1: <ts:HelloWorld></ts:HelloWorld>
+            Example 1: <ts:HelloWorld />
             <br />
             <ts:BlueBackground>Example 2</ts:BlueBackground>
             <br />
