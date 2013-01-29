@@ -54,4 +54,14 @@
         </attribute>
     </tag>  
 
+  <tag>
+    <name>GroceryList</name>
+    <tagclass>TagSupport.GroceryList </tagclass>
+    <bodycontent>tagdependent</bodycontent>
+    <attribute>
+        <name>items</name>
+        <required>true</required>
+    </attribute>
+  </tag>
+
 </taglib>
