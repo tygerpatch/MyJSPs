@@ -7,7 +7,14 @@
     to create names with a mnemonic value. -->
     <short-name>bts</short-name>
     <uri>/WEB-INF/tld/BodyTagSupportTLD</uri>
-    
+
+  <tag>
+    <name>GroceryList</name>
+    <tagclass>BodyTagSupport.GroceryList </tagclass>
+    <bodycontent>tagdependent</bodycontent>
+  </tag>
+
+
     <tag>
         <name>filter</name>
         <tagclass>BodyTagSupport.FilterTag</tagclass>

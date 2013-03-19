@@ -32,7 +32,7 @@
     <ul>
       <li><a href="./jsp/mysql/NewBook.jsp">New Book</a></li>
       <li><a href="./jsp/mysql/SearchBooks.jsp">Search Books</a></li>
-      <li><a href="./jsp/mysql/ViewBooks.jsp">View All Books</a></li>
+      <%-- <li><a href="./jsp/mysql/ViewBooks.jsp">View All Books</a></li> --%>
     </ul>
     <h3>Error Page</h3>
     <ul>
@@ -40,8 +40,8 @@
     </ul>
     <!-- These examples were taken from a variety of sources -->
     <p>
-      <a href="./jsp/TagSupportExamples.jsp">TagSupport</a><br />
-      <a href="./jsp/BodyTagSupportExamples/index.jsp">BodyTagSupport</a>
+      <a href="./jsp/taglibs/TagSupportExamples.jsp">TagSupport</a><br />
+      <a href="./jsp/taglibs/BodyTagSupportExamples/index.jsp">BodyTagSupport</a>
     </p>
     <%@ include file="/WEB-INF/jspf/footer.jspf"%>
   </body>
