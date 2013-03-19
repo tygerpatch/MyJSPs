@@ -24,6 +24,16 @@
   </taglib>
   -->
 
+  <servlet>
+    <servlet-name>Suggest Servlet</servlet-name>
+    <servlet-class>servlets.Suggest</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>Suggest Servlet</servlet-name>
+    <url-pattern>/Suggest</url-pattern>
+  </servlet-mapping>
+
   <session-config>
     <session-timeout>30</session-timeout>
   </session-config>
