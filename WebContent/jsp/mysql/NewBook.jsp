@@ -4,14 +4,14 @@
 <html>
   <body>
     <%
-      String name = request.getParameter("name");
+      String title = request.getParameter("title");
       String author = request.getParameter("author");
 
-      if ((null != name) && (null != author)) {
+      if ((null != title) && (null != author)) {
         Class.forName("com.mysql.jdbc.Driver").newInstance();
         Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/my_jdbc", "root", "password");
         Statement statement = connection.createStatement();
-        statement.executeUpdate("INSERT INTO books(name, author) values('"+ name + "','" + author + "')");
+        statement.executeUpdate("INSERT INTO books(title, author) values('"+ title + "','" + author + "')");
 
         statement.close();
         connection.close();
@@ -24,8 +24,8 @@
     <form action="NewBook.jsp" method="post">
       <table>
         <tr>
-          <td>Book Name:</td>
-          <td><input name="name" type="text" size="50">
+          <td>Title:</td>
+          <td><input name="title" type="text" size="50">
           </td>
         </tr>
         <tr>
