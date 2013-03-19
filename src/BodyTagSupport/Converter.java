@@ -4,6 +4,9 @@ import javax.servlet.jsp.JspException;
 import javax.servlet.jsp.tagext.BodyContent;
 import javax.servlet.jsp.tagext.BodyTagSupport;
 
+// Title: Beginning Apache Struts : From Novice to Professional
+// Author: Arnold Doray
+// Chapter 4: Custom Tags
 public class Converter extends BodyTagSupport {
   private String _to = null;
 
