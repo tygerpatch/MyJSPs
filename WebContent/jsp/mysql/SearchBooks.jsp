@@ -27,7 +27,7 @@
 
           var userInput = document.getElementById('userInput').value;
 
-          var url = "http://localhost:8080/MyJSPs/Suggest?searchBy=" + searchBy + "&userInput=" + userInput;
+          var url = "<%= request.getContextPath() %>/Suggest?searchBy=" + searchBy + "&userInput=" + userInput;
           xmlHttp.open("GET", url, true);
           xmlHttp.send(null);
       }
