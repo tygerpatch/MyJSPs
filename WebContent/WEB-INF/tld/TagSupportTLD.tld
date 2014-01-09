@@ -64,4 +64,15 @@
     </attribute>
   </tag>
 
+  <tag>
+    <name>RepeatBack</name>
+    <tagclass>IterationTag.RepeatBack</tagclass>
+    <bodycontent>tagdependent</bodycontent>
+    <attribute>
+        <name>times</name>
+        <required>true</required>
+    </attribute>
+  </tag>
+
+
 </taglib>

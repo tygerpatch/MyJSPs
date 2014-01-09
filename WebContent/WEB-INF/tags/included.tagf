@@ -1,0 +1,3 @@
+<% out.print("Hello from included.tagf"); %>
+<%-- The above was taken from Budi Kurniawan's 
+A Tutorial : Servlet & JSP, pg 185  --%>

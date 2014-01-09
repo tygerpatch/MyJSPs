@@ -43,6 +43,17 @@
       <a href="./jsp/taglibs/TagSupportExamples.jsp">TagSupport</a><br />
       <a href="./jsp/taglibs/BodyTagSupportExamples/index.jsp">BodyTagSupport</a>
     </p>
+    <h3>Tag Files</h3>
+    <ul>
+      <li><a href="./jsp/tag-files/firstTagTest.jsp">First Tag Test</a></li>
+      <li><a href="./jsp/tag-files/includeDemoTagTest.jsp">include Demo Tag Test</a></li>
+      <li><a href="./jsp/tag-files/encodeTagTest.jsp">encode Tag Test</a></li>
+      <li><a href="./jsp/tag-files/varDemoTest.jsp">var Demo Test</a></li>
+      <li><a href="./jsp/tag-files/searchEnginer.html">search enginer</a></li>
+      <li><a href="./jsp/tag-files/invokeTest.jsp">invoke test</a></li>
+    </ul>
+    
+    
     <%@ include file="/WEB-INF/jspf/footer.jspf"%>
   </body>
 </html>

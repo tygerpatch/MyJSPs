@@ -18,7 +18,9 @@
             </a><br />
             Example 4: <tagSupport:ReverseString str="This message is in reverse!" /><br />
             Example 5: <tagSupport:GroceryList items = "apples, oranges, pears, carrots"> </tagSupport:GroceryList>
-            <%-- Note: The space is necessary between GroceryList tags in order for the doAfterBody method to be evaluated --%> 
+            <%-- Note: The space is necessary between GroceryList tags in order for the doAfterBody method to be evaluated --%>
+            
+            Example 6: <tagSupport:RepeatBack times="3">Polly wants a cracker.</tagSupport:RepeatBack> 
         </p>
     </body>
 </html>
